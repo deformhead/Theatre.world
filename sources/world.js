@@ -75,6 +75,19 @@ function World() {
         this.entities.push(entity);
     }
 
+    function get(entity) {
+
+        for (let iterator = 0, length = this.entities.length; iterator < length; iterator += 1) {
+
+            const current = this.entities[iterator];
+
+            if (current.name === entity) {
+
+                return current;
+            }
+        }
+    }
+
     function remove(entity) {
 
         this.entities.splice(this.entities.indexOf(entity), 1);
@@ -83,6 +96,7 @@ function World() {
     this.entities = [];
 
     this.add = add;
+    this.get = get;
     this.remove = remove;
 }
 
