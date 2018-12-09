@@ -15,7 +15,7 @@ function Entity(name, components) {
 
     function has(components) {
 
-        for (let iterator = 0, length = components.length; iterator < components.length; iterator += 1) {
+        for (let iterator = 0, length = components.length; iterator < length; iterator += 1) {
 
             const component = components[iterator];
 
@@ -30,7 +30,7 @@ function Entity(name, components) {
 
     function remove(components) {
 
-        for (let iterator = 0, length = components.length; iterator < components.length; iterator += 1) {
+        for (let iterator = 0, length = components.length; iterator < length; iterator += 1) {
 
             const component = components[iterator];
 
